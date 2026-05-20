@@ -12,7 +12,7 @@
   <a href="https://bundlephobia.com/package/agentkit">
     <img src="https://img.shields.io/bundlephobia/minzip/agentkit" alt="bundle size" />
   </a>
-  <a href="https://github.com/NileGazer00/agentkit.js">
+  <a href="https://github.com/NileGazer00/agentkit.js/stargazers">
     <img src="https://img.shields.io/github/stars/NileGazer00/agentkit.js?style=social" alt="GitHub stars" />
   </a>
   <a href="https://github.com/NileGazer00/agentkit.js/actions">
@@ -35,26 +35,7 @@
 
 ---
 
-## 📦 Install
+## ✨ Quick Start
 
 ```bash
 npm install agentkit
-##⚡ Quick Start
-import { Agent, tool } from 'agentkit'
-
-// 1️⃣ Define a tool
-const calculator = tool({
-  name: 'calculate',
-  execute: async ({ expression }) => eval(expression)
-})
-
-// 2️⃣ Create an agent
-const agent = new Agent({
-  model: 'gpt-4o',
-  tools: [calculator],
-  strategy: 'react'
-})
-
-// 3️⃣ Run it
-const result = await agent.run('What is 25 * 4 + 10?')
-console.log(result.answer) // "110"
